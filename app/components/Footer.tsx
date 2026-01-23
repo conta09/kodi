@@ -11,6 +11,7 @@ import {
   Users,
   ArrowUpRight
 } from 'lucide-react';
+import Image from 'next/image';
 
 const Footer = () => {
   const districts = [
@@ -39,11 +40,17 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-4 mb-6">
               <div className="relative">
-                
+                <Image
+                  src="/kodi.png"
+                  alt="Kodi Logo"
+                  width={80}
+                  height={80}
+                  className="rounded-xl"
+                />
               </div>
               <div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                  Kodi
+                  {/* Logo image replaces text */}
                 </h2>
                 <p className="text-gray-600 font-medium">Redefining Real Estate</p>
               </div>
@@ -188,9 +195,18 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-gray-500">
-                © {new Date().getFullYear()} Kodi Real Estate. All rights reserved.
-              </p>
+              <div className="flex items-center space-x-4">
+                <Image
+                  src="/kodi.png"
+                  alt="Kodi Logo"
+                  width={40}
+                  height={40}
+                  className="rounded-lg"
+                />
+                <p className="text-gray-500">
+                  © {new Date().getFullYear()} Kodi Real Estate. All rights reserved.
+                </p>
+              </div>
             </div>
             <div className="flex items-center space-x-6">
               <span className="text-gray-400 text-sm">Kigali, Rwanda</span>
